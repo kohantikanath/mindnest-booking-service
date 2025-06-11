@@ -1,5 +1,5 @@
 // controllers/timeslotController.js
-const timeslotService = require('../services/timeslotService');
+const timeslotService = require('../services/timeSlotService.js');
 const { validationResult } = require('express-validator');
 
 class TimeslotController {

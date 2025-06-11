@@ -3,7 +3,7 @@
 const express = require('express');
 const router = express.Router();
 const { body } = require('express-validator');
-const timeslotController = require('../controllers/timeSlotController.js');
+const timeslotController = require('../controllers/timeslotController.js');
 
 // Validation middleware
 const generateSlotsValidation = [
