@@ -1,7 +1,7 @@
 
 // services/bookingService.js
-const Booking = require('../models/Booking');
-const TimeSlot = require('../models/TimeSlot');
+const Booking = require('../models/Booking.js');
+const TimeSlot = require('../models/TimeSlot.js');
 
 const bookingService = {
   // Create new booking
