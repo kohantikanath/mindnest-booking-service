@@ -4,8 +4,7 @@ const mongoose = require('mongoose');
 
 const timeSlotSchema = new mongoose.Schema({
   therapistId: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: 'User',
+    type: Number,
     required: true
   },
   templateId: {
@@ -32,8 +31,7 @@ const timeSlotSchema = new mongoose.Schema({
     default: false
   },
   bookedBy: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: 'User',
+    type: Number,
     default: null
   },
   isActive: {

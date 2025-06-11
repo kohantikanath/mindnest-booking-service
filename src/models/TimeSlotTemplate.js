@@ -3,8 +3,7 @@ const mongoose = require('mongoose');
 
 const timeSlotTemplateSchema = new mongoose.Schema({
   therapistId: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: 'User',
+    type: Number,
     required: true
   },
   dayOfWeek: {
@@ -43,7 +42,7 @@ const timeSlotTemplateSchema = new mongoose.Schema({
 });
 
 // Compound index to ensure one template per therapist per day
-timeSlotTemplateSchema.index({ therapistId: 1, dayOfWeek: 1 }, { unique: true });
+// timeSlotTemplateSchema.index({ therapistId: 1, dayOfWeek: 1 }, { unique: true });
 
 module.exports = mongoose.model('TimeSlotTemplate', timeSlotTemplateSchema);
 

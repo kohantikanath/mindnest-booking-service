@@ -7,13 +7,13 @@ const bookingController = require('../controllers/bookingController.js');
 
 // Validation middleware
 const bookingValidation = [
-  body('patientId').isMongoId().withMessage('Valid patient ID is required'),
+  body('patientId').isInt().withMessage('Valid patient ID is required'),
   body('timeSlotId').isMongoId().withMessage('Valid time slot ID is required')
 ];
 
 const cancelValidation = [
   body('cancellationReason').notEmpty().withMessage('Cancellation reason is required'),
-  body('cancelledBy').isMongoId().withMessage('Valid user ID is required')
+  body('cancelledBy').isIn(['patient', 'therapist']).withMessage('Invalid Option! Only Patient or Therapist accepted!')
 ];
 
 const statusValidation = [

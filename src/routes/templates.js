@@ -6,7 +6,7 @@ const templateController = require('../controllers/templateController');
 
 // Validation middleware
 const templateValidation = [
-  body('therapistId').isMongoId().withMessage('Valid therapist ID is required'),
+  body('therapistId').isInt().withMessage('Valid therapist ID is required'),
   body('dayOfWeek').isIn(['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday']),
   body('startTime').matches(/^([0-1]?[0-9]|2[0-3]):[0-5][0-9]$/).withMessage('Valid start time required (HH:MM)'),
   body('endTime').matches(/^([0-1]?[0-9]|2[0-3]):[0-5][0-9]$/).withMessage('Valid end time required (HH:MM)'),

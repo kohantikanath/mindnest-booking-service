@@ -4,18 +4,14 @@ const mongoose = require('mongoose');
 
 const bookingSchema = new mongoose.Schema({
   bookingId: {
-    type: String,
-    unique: true,
-    required: true
+    type: String
   },
   patientId: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: 'User',
+    type: Number,
     required: true
   },
   therapistId: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: 'User',
+    type: Number,
     required: true
   },
   timeSlotId: {
@@ -53,8 +49,8 @@ const bookingSchema = new mongoose.Schema({
     default: null
   },
   cancelledBy: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: 'User',
+    type: String,
+    enum: ['patient', 'therapist'],
     default: null
   }
 }, {
