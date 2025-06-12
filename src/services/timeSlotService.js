@@ -1,7 +1,7 @@
 
 // services/timeslotService.js
 const TimeSlot = require('../models/TimeSlot.js');
-const TimeSlotTemplate = require('../models/TimeslotTemplate.js');
+const TimeSlotTemplate = require('../models/TimeSlotTemplate.js');
 const moment = require('moment');
 
 const timeslotService = {
