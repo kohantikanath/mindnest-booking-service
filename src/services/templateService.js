@@ -1,6 +1,6 @@
 
 // services/templateService.js
-const TimeSlotTemplate = require('../models/TimeslotTemplate.js');
+const TimeSlotTemplate = require('../models/TimeSlotTemplate.js');
 
 const templateService = {
   // Create new template
