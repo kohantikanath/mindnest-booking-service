@@ -50,7 +50,7 @@ const bookingSchema = new mongoose.Schema({
   },
   cancelledBy: {
     type: String,
-    enum: ['patient', 'therapist'],
+    enum: [null, 'patient', 'therapist'],
     default: null
   }
 }, {
